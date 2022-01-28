@@ -1,35 +1,57 @@
 """
-Name: <your name goes here – first and last>
-<ProgramName>.py
+Name: Iva Karalic
+hw2.py
 
-Problem: <Brief, one or two sentence description of the problem that this program solves, in your own words.>
+Problem: Using import math to solve problems
 
 Certification of Authenticity:
-<include one of the following>
 I certify that this assignment is entirely my own work.
-I certify that this assignment is my own work, but I discussed it with: <Name(s)>
 """
+
 import math
 
 
 def sum_of_threes():
-    pass
+    upper_bound = eval(input("What is the upper bound? "))
+    acc = 0
+    for x in range(0, upper_bound + 1, 3):
+        acc = acc + x
+    print(acc)
 
 
 def multiplication_table():
-    pass
+    for i in range(1, 11):
+        for j in range(1, 11):
+            print(i * j, end=" ")
+        print()
 
 
 def triangle_area():
-    pass
+    a = eval(input("Enter side a length: "))
+    b = eval(input("Enter side b length: "))
+    c = eval(input("Enter side c length: "))
+    s = (a + b + c) / 2
+    x = s * (s - a)(s - b)(s - c)
+    result = math.sqrt(x)
+    print("area is", result)
 
 
 def sum_squares():
-    pass
+    lower = eval(input("Enter lower range: "))
+    upper = eval(input("Enter upper range: "))
+    acc = 0
+    for i in range(lower, upper + 1):
+        acc = acc + i * i
+    print(acc)
 
 
 def power():
-    pass
+    base = eval(input("Enter base: "))
+    exponent = eval(input("Enter exponent: "))
+    acc = 1
+    for i in range(exponent):
+        acc = acc * base
+    print(acc)
 
 
 if __name__ == '__main__':
